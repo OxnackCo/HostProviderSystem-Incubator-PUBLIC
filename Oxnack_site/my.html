@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./site_files/logo.svg" type="image/x-icon">
+    <title>My Services - Oxnack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/my.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="oxnack-my-services">
+        <div class="container">
+            <div class="oxnack-my-header">
+                <h1>My Services</h1>
+                <p>Manage your servers and services</p>
+                <div class="oxnack-user-actions">
+                    <span id="userEmail"></span>
+                    <button id="logoutAllBtn" class="oxnack-primary-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout All Devices
+                    </button>
+                </div>
+            </div>
+
+            <div id="loading" class="oxnack-loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading your services...</p>
+            </div>
+
+            <div id="servicesGrid" class="oxnack-services-grid">
+                <!-- Services will be loaded here -->
+            </div>
+
+            <div id="noServices" class="oxnack-no-services" style="display: none;">
+                <i class="fas fa-server"></i>
+                <h3>No Services Found</h3>
+                <p>You don't have any active services yet.</p>
+                <a href="/server-rent" class="oxnack-primary-btn">Order Server</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/my.js"></script>
+</body>
+</html>

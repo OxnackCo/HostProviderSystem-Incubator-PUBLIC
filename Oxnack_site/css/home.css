@@ -1,0 +1,178 @@
+/* Home Hero Section - oxnack-home-hero */
+.oxnack-home-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.oxnack-home-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+
+.oxnack-home-hero-text {
+    width: 100%;
+    max-width: 600px;
+}
+
+.oxnack-home-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.oxnack-home-highlight {
+    color: #a5b4fc;
+}
+
+.oxnack-home-hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.oxnack-home-cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.oxnack-home-hero-image-container {
+    display: none;
+    position: relative;
+}
+
+.oxnack-home-hero-image {
+    max-width: 100%;
+    height: auto;
+    animation: oxnack-float 6s ease-in-out infinite;
+}
+
+/* Home Services Section - oxnack-home-services */
+.oxnack-home-services {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
+
+.oxnack-section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.oxnack-section-subtitle {
+    text-align: center;
+    color: var(--gray-color);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.oxnack-home-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.oxnack-home-service-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+}
+
+.oxnack-home-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.oxnack-home-service-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.oxnack-home-service-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.oxnack-home-service-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.oxnack-home-benefits-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.oxnack-home-benefits-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0.8rem;
+}
+
+.oxnack-home-benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Home Responsive - oxnack-home-responsive */
+@media (min-width: 768px) {
+    .oxnack-home-hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .oxnack-home-hero-text {
+        width: 50%;
+    }
+    
+    .oxnack-home-hero-image-container {
+        display: block;
+        width: 45%;
+    }
+}
+
+@media (min-width: 992px) {
+    .oxnack-home-hero-title {
+        font-size: 3rem;
+    }
+    
+    .oxnack-section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .oxnack-home-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .oxnack-primary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

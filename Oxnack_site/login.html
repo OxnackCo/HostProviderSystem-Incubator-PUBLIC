@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./site_files/logo.svg" type="image/x-icon">
+    <title>Вход - Oxnack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="oxnack-header">
+        <div class="container oxnack-header-content">
+            <div class="oxnack-logo">
+                <a href="/"><img src="./site_files/logo.svg" alt="Oxnack logo" width="140"></a>
+            </div>
+            
+            <div class="oxnack-nav-mobile">
+                <button class="oxnack-mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Container -->
+    <section class="oxnack-auth-container">
+        <div class="oxnack-auth-box">
+            <div class="oxnack-auth-header">
+                <h2 data-i18n="login.title">Вход в аккаунт</h2>
+                <p data-i18n="login.subtitle">Введите свои данные для входа</p>
+            </div>
+            
+            <form id="loginForm" class="oxnack-auth-form">
+                <div class="oxnack-form-group">
+                    <label for="email" data-i18n="login.label.email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Ваш email" data-i18n="login.placeholder.email">
+                </div>
+                
+                <div class="oxnack-form-group">
+                    <label for="password" data-i18n="login.label.password">Пароль</label>
+                    <input type="password" id="password" name="password" required placeholder="Ваш пароль" data-i18n="login.placeholder.password">
+                </div>
+                
+                <div class="oxnack-form-actions">
+                    <button type="submit" class="oxnack-primary-btn" data-i18n="login.btn.submit">Войти</button>
+                    <a href="/register" class="oxnack-auth-link" data-i18n="login.link.register">Нет аккаунта? Зарегистрируйтесь</a>
+                    <a href="#" id="forgotPassword" class="oxnack-auth-link" data-i18n="login.link.forgot">Забыли пароль?</a>
+                </div>
+            </form>
+            
+            <!-- Forgot Password Form (hidden by default) -->
+            <form id="forgotPasswordForm" class="oxnack-hidden">
+                <div class="oxnack-form-group">
+                    <label for="resetEmail" data-i18n="login.reset.label.email">Email</label>
+                    <input type="email" id="resetEmail" name="email" required placeholder="Ваш email" data-i18n="login.reset.placeholder.email">
+                </div>
+                
+                <div class="oxnack-form-group oxnack-hidden" id="resetCodeGroup">
+                    <label for="resetCode" data-i18n="login.reset.label.code">Код подтверждения</label>
+                    <input type="text" id="resetCode" name="code" placeholder="6-значный код" data-i18n="login.reset.placeholder.code">
+                </div>
+                
+                <div class="oxnack-form-actions">
+                    <button type="submit" class="oxnack-primary-btn" data-i18n="login.reset.btn.send">Отправить</button>
+                    <a href="#" id="backToLogin" class="oxnack-auth-link" data-i18n="login.reset.link.back">Вернуться ко входу</a>
+                </div>
+            </form>
+            
+            <div class="oxnack-auth-footer">
+                <p data-i18n="login.footer.agree">Входя в систему, вы соглашаетесь с нашими <a href="/terms" data-i18n="footer.terms">Условиями использования</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

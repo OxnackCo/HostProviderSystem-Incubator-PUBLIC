@@ -1,0 +1,267 @@
+/* Server Rent Styles - oxnack-server-rent */
+.oxnack-server-rent {
+    padding: 40px 0;
+    background-color: var(--light-color);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Balance Display - добавлен справа сверху */
+.oxnack-balance-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+    z-index: 100;
+}
+
+.oxnack-balance-display i {
+    color: var(--secondary-color);
+}
+
+.oxnack-server-rent-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.oxnack-server-rent-header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.oxnack-server-rent-header p {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+.oxnack-server-config {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.oxnack-config-group {
+    margin-bottom: 30px;
+}
+
+.oxnack-config-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.oxnack-config-select,
+.oxnack-config-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.oxnack-config-select:focus,
+.oxnack-config-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.oxnack-config-slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--light-gray);
+    outline: none;
+    margin: 15px 0;
+    -webkit-appearance: none;
+}
+
+.oxnack-config-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.oxnack-config-slider::-webkit-slider-thumb:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.oxnack-config-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    border: none;
+}
+
+.oxnack-slider-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.oxnack-price-section {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-gray);
+}
+
+.oxnack-total-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.oxnack-create-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.oxnack-create-btn:disabled {
+    background-color: var(--light-gray);
+    color: var(--gray-color);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.oxnack-create-btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Modal Styles */
+.oxnack-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.oxnack-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: oxnack-modal-appear 0.3s ease;
+}
+
+@keyframes oxnack-modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.oxnack-modal-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--gray-color);
+    z-index: 10;
+}
+
+.oxnack-modal-close:hover {
+    color: var(--dark-color);
+}
+
+.oxnack-modal-body {
+    padding: 40px;
+    text-align: center;
+}
+
+.oxnack-modal-success {
+    color: #22c55e;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.oxnack-modal-error {
+    color: #ef4444;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.oxnack-modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.oxnack-modal-message {
+    color: var(--gray-color);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .oxnack-balance-display {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 0 auto 20px;
+        width: fit-content;
+    }
+    
+    .oxnack-server-config {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .oxnack-server-rent-header h1 {
+        font-size: 2rem;
+    }
+    
+    .oxnack-modal-content {
+        margin: 20% auto;
+        width: 95%;
+    }
+    
+    .oxnack-modal-body {
+        padding: 30px 20px;
+    }
+}

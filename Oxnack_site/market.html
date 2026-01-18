@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./site_files/logo.svg" type="image/x-icon">
+    <title data-i18n="market.title">Oxnack - Рынок услуг</title>
+    <meta name="description" content="Каталог услуг Oxnack - профессиональные IT решения для вашего бизнеса">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/market.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="market-container">
+        <div class="container">
+            <div class="market-header">
+                <h1 class="market-title" data-i18n="market.title">Рынок услуг</h1>
+                <p class="market-subtitle" data-i18n="market.subtitle">Выберите нужную услугу из нашего каталога</p>
+            </div>
+
+            <div class="services-grid" id="servicesContainer"></div>
+
+            <div class="market-bottom">
+                <a href="https://t.me/OxnackSupport_bot" class="market-bot-btn" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span data-i18n="market.bot_button">Написать в поддержку</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div class="service-modal" id="serviceModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Service Image">
+            </div>
+            <div class="modal-details">
+                <h2 id="modalName"></h2>
+                <div class="modal-price-container">
+                    <span class="modal-price" id="modalPrice"></span>
+                    <span class="modal-currency" id="modalCurrency"></span>
+                </div>
+                <p class="modal-description" id="modalDescription"></p>
+                <a href="#" class="modal-bot-btn" id="modalBotLink" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span data-i18n="market.modal_bot_button">Заказать через бота</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/market.js"></script>
+</body>
+</html>

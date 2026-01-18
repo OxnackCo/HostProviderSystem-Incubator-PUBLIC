@@ -1,0 +1,64 @@
+<header class="oxnack-header">
+    <div class="container oxnack-header-content">
+        <div class="oxnack-logo">
+            <a href="/"><img src="./site_files/logo.svg" alt="Oxnack logo" width="140"></a>
+        </div>
+        
+        <nav class="oxnack-nav-desktop">
+                        <a href="/#services" class="oxnack-nav-item" data-i18n="nav.services">Сервисы</a>
+                        <a href="/market" class="oxnack-nav-item" data-i18n="nav.market">Маркетплейс</a>
+                        <a href="https://portfolio.oxnack.com" class="oxnack-nav-item" data-i18n="nav.portfolio">Портфолио</a>
+                        <a href="/server-rent" class="oxnack-nav-item" data-i18n="nav.vds">VDS Хостинг</a> 
+          <!--  <a href="/vpn" class="oxnack-nav-item">VPN</a>-->
+        </nav>
+        
+        <div class="oxnack-user-panel" id="userPanel">
+            <div class="oxnack-auth-buttons" id="authButtons">
+                <a href="/login.html" class="oxnack-auth-btn oxnack-login-btn" data-i18n="auth.login">Login</a>
+                <a href="/register.html" class="oxnack-auth-btn oxnack-register-btn" data-i18n="auth.register">Register</a>
+            </div>
+            
+            <div class="oxnack-user-info" id="userInfo" style="display: none;">
+                <a href="/pay.html" class="oxnack-user-balance" id="userBalance"><span data-i18n="header.balance_label">Balance</span> <span id="userBalanceAmount">Loading...</span></a>
+                <a href="/my.html" class="oxnack-user-details">
+                    <div class="oxnack-user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="oxnack-user-email" id="userEmail">user@example.com</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="oxnack-lang-switcher" style="margin-left:12px;">
+            <select id="langSelector" aria-label="Language selector">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
+
+        <div class="oxnack-nav-mobile">
+            <button class="oxnack-mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="oxnack-mobile-menu" id="mobileMenu">
+        <a href="/#services" class="oxnack-mobile-nav-item" data-i18n="nav.services">Сервисы</a>
+        <a href="/market" class="oxnack-mobile-nav-item" data-i18n="nav.market">Маркетплейс</a>
+        <a href="https://portfolio.oxnack.com" class="oxnack-mobile-nav-item" data-i18n="nav.portfolio">Портфолио</a>
+        <!-- <a href="/server-rent" class="oxnack-mobile-nav-item">VDS</a> -->
+        <!-- <a href="/vpn" class="oxnack-mobile-nav-item">VPN</a> -->
+        <div class="oxnack-mobile-auth" id="mobileAuth" style="padding: 12px 0;">
+            <a href="/login" class="oxnack-auth-btn oxnack-login-btn" style="display: block; text-align: center; margin-bottom: 8px;" data-i18n="auth.login">Login</a>
+            <a href="/register" class="oxnack-auth-btn oxnack-register-btn" style="display: block; text-align: center;" data-i18n="auth.register">Register</a>
+        </div>
+        <div class="oxnack-mobile-user" id="mobileUser" style="display: none; padding: 12px 0;">
+            <div style="color: var(--gray-color); font-size: 0.9rem; margin-bottom: 8px;" id="mobileUserEmail"></div>
+            <div style="color: var(--primary-color); font-weight: 600; margin-bottom: 8px;" id="mobileUserBalance"><span data-i18n="header.balance_label">Balance</span> <span id="mobileUserBalanceAmount"></span></div>
+            <a href="/my" class="oxnack-primary-btn" style="display: block; text-align: center; margin-bottom: 8px;" data-i18n="mobile.my_services">My Services</a>
+            <a href="/pay" class="oxnack-primary-btn" style="display: block; text-align: center;" data-i18n="mobile.top_up">Top Up Balance</a>
+        </div>
+    </div>
+</header>
+<script src="/js/i18n.js" defer></script>

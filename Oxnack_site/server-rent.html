@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./site_files/logo.svg" type="image/x-icon">
+    <title>Аренда сервера - Oxnack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/server-rent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header будет вставлен сюда через JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <main class="oxnack-server-rent">
+        <!-- Balance Display - добавлен справа сверху -->
+        <!-- <div class="oxnack-balance-display">
+            <i class="fas fa-wallet"></i>
+            <span id="userBalance">Загрузка...</span>
+        </div> -->
+
+        <div class="container">
+            <div class="oxnack-server-rent-header">
+                <h1 data-i18n="server.title">Аренда сервера</h1>
+                <p data-i18n="server.subtitle">Настройте параметры вашего VPS</p>
+            </div>
+
+            <div class="oxnack-server-config">
+                <form id="serverConfigForm">
+                    <!-- Выбор страны -->
+                    <div class="oxnack-config-group">
+                        <label for="countrySelect" data-i18n="server.label.country">Местоположение сервера</label>
+                        <select id="countrySelect" class="oxnack-config-select">
+                            <option value="">Загрузка...</option>
+                        </select>
+                    </div>
+
+                    <!-- Выбор ОС -->
+                    <div class="oxnack-config-group">
+                        <label for="osSelect" data-i18n="server.label.os">Операционная система</label>
+                        <select id="osSelect" class="oxnack-config-select">
+                            <option value="">Загрузка...</option>
+                        </select>
+                    </div>
+
+                    <!-- Конфигурация RAM -->
+                    <div class="oxnack-config-group">
+                        <label for="ramSlider" data-i18n="server.label.ram">Оперативная память: <span id="ramValue">-</span> ГБ</label>
+                        <input type="range" id="ramSlider" class="oxnack-config-slider" min="1" max="32" value="4" step="1">
+                        <div class="oxnack-slider-labels">
+                            <span id="ramMin" data-i18n="server.ram.min">1 ГБ</span>
+                            <span id="ramMax" data-i18n="server.ram.max">32 ГБ</span>
+                        </div>
+                    </div>
+
+                    <!-- Конфигурация CPU -->
+                    <div class="oxnack-config-group">
+                        <label for="coreSlider" data-i18n="server.label.cpu">Количество ядер: <span id="coreValue">-</span></label>
+                        <input type="range" id="coreSlider" class="oxnack-config-slider" min="1" max="16" value="2" step="1">
+                        <div class="oxnack-slider-labels">
+                            <span id="coreMin" data-i18n="server.cpu.min">1 ядро</span>
+                            <span id="coreMax" data-i18n="server.cpu.max">16 ядер</span>
+                        </div>
+                    </div>
+
+                    <!-- Конфигурация SSD -->
+                    <div class="oxnack-config-group">
+                        <label for="ssdSlider" data-i18n="server.label.ssd">SSD хранилище: <span id="ssdValue">-</span> ГБ</label>
+                        <input type="range" id="ssdSlider" class="oxnack-config-slider" min="20" max="1000" value="50" step="10">
+                        <div class="oxnack-slider-labels">
+                            <span id="ssdMin" data-i18n="server.ssd.min">20 ГБ</span>
+                            <span id="ssdMax" data-i18n="server.ssd.max">1000 ГБ</span>
+                        </div>
+                    </div>
+
+                    <!-- Промокод -->
+                    <div class="oxnack-config-group">
+                        <label for="promoCode" data-i18n="server.label.promo">Промокод (необязательно)</label>
+                        <input type="text" id="promoCode" class="oxnack-config-input" placeholder="Введите промокод" data-i18n="server.placeholder.promo">
+                    </div>
+
+                    <!-- Цена и создание -->
+                    <div class="oxnack-price-section">
+                        <div class="oxnack-total-price" data-i18n="server.total">Итого: <span id="totalPrice">-</span> руб./мес.</div>
+                        <button type="submit" class="oxnack-primary-btn oxnack-create-btn" disabled data-i18n="server.btn.create">
+                            <i class="fas fa-server"></i> Создать сервер
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="serverModal" class="oxnack-modal">
+        <div class="oxnack-modal-content">
+            <span class="oxnack-modal-close">&times;</span>
+            <div class="oxnack-modal-body" id="modalBody">
+                <!-- Контент модального окна -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer будет вставлен сюда через JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/server-rent.js"></script>
+</body>
+</html>

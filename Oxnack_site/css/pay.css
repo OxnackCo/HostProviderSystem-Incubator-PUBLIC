@@ -1,0 +1,167 @@
+.oxnack-pay {
+    padding: 40px 0;
+    background-color: var(--light-color);
+    min-height: 100vh;
+}
+
+.oxnack-pay-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.oxnack-pay-header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.oxnack-pay-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.oxnack-current-balance {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.oxnack-balance-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.oxnack-payment-methods h3 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.oxnack-payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.oxnack-payment-option input[type="radio"] {
+    display: none;
+}
+
+.oxnack-payment-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.oxnack-payment-option label i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--gray-color);
+}
+
+.oxnack-payment-option input[type="radio"]:checked + label {
+    border-color: var(--primary-color);
+    background-color: var(--light-color);
+}
+
+.oxnack-payment-option input[type="radio"]:checked + label i {
+    color: var(--primary-color);
+}
+
+.oxnack-amount-selection {
+    margin-bottom: 30px;
+}
+
+.oxnack-amount-selection h4 {
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.oxnack-amount-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.oxnack-amount-btn {
+    padding: 12px;
+    border: 2px solid var(--light-gray);
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.oxnack-amount-btn:hover {
+    border-color: var(--primary-color);
+}
+
+.oxnack-amount-btn.active {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.oxnack-custom-amount {
+    margin-top: 15px;
+}
+
+.oxnack-custom-amount label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.oxnack-custom-amount input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.oxnack-custom-amount input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.oxnack-pay-actions {
+    text-align: center;
+}
+
+.oxnack-pay-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .oxnack-payment-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .oxnack-amount-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .oxnack-pay-content {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}

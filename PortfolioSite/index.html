@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxnack | Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.svg" alt="Oxnack team logo">
+                <span>Oxnack</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link" data-key="nav.home">Home</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link" data-key="nav.projects">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-key="nav.contact">Collaboration</a></li>
+                <li class="nav-item">
+                    <div class="language-switcher">
+                        <select id="language-select">
+                            <option value="en">EN</option>
+                            <option value="ru">RU</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-key="hero.title">We Create Digital Solutions for the Future</h1>
+            <p data-key="hero.subtitle">Oxnack is a team of passionate developers creating innovative web applications and software.</p>
+            <a href="#projects" class="cta-button" data-key="hero.cta">Our Work</a>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1"><i class="fas fa-code"></i></div>
+            <div class="floating-card card-2"><i class="fas fa-mobile-alt"></i></div>
+            <div class="floating-card card-3"><i class="fas fa-database"></i></div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 data-key="projects.title">Our Projects</h2>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 data-key="contact.title">Have a project or idea?</h2>
+                <p data-key="contact.description">We're always open to discussing new challenges. Our Telegram bot will help you quickly get in touch with us and start a conversation.</p>
+                <a href="https://t.me/OxnackOrderBot" class="tg-button" target="_blank">
+                    <i class="fab fa-telegram"></i> <span data-key="contact.telegram">Write in Telegram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Oxnack. <span data-key="footer.rights">All rights reserved</span>.</p>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Project detailed view">
+                <div class="modal-info">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <div class="modal-links">
+                        <a id="modal-github" href="#" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a id="modal-live" href="#" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> <span data-key="modal.demo">Live Demo</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/language.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

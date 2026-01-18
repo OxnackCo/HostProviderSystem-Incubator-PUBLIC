@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./site_files/logo.svg" type="image/x-icon">
+    <title>Регистрация - Oxnack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="oxnack-header">
+        <div class="container oxnack-header-content">
+            <div class="oxnack-logo">
+                <a href="/"><img src="./site_files/logo.svg" alt="Oxnack logo" width="140"></a>
+            </div>
+            
+            <div class="oxnack-nav-mobile">
+                <button class="oxnack-mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Container -->
+    <section class="oxnack-auth-container">
+        <div class="oxnack-auth-box">
+            <div class="oxnack-auth-header">
+                <h2 data-i18n="register.title">Создать аккаунт</h2>
+                <p data-i18n="register.subtitle">Заполните форму для регистрации</p>
+            </div>
+            
+            <form id="registerForm" class="oxnack-auth-form">
+                <div class="oxnack-form-group">
+                    <label for="regEmail" data-i18n="register.label.email">Email</label>
+                    <input type="email" id="regEmail" name="email" required placeholder="Ваш email" data-i18n="register.placeholder.email">
+                </div>
+                
+                <div class="oxnack-form-group">
+                    <label for="regPassword" data-i18n="register.label.password">Пароль</label>
+                    <input type="password" id="regPassword" name="password" required placeholder="Ваш пароль" data-i18n="register.placeholder.password">
+                    <p class="oxnack-form-hint" data-i18n="register.hint.password">Пароль должен содержать минимум 8 символов, цифры и специальные знаки</p>
+                </div>
+                
+                <div class="oxnack-form-group">
+                    <label for="regPasswordConfirm" data-i18n="register.label.password_confirm">Подтвердите пароль</label>
+                    <input type="password" id="regPasswordConfirm" name="passwordConfirm" required placeholder="Повторите пароль" data-i18n="register.placeholder.password_confirm">
+                </div>
+                
+                <div class="oxnack-form-actions">
+                    <button type="submit" class="oxnack-primary-btn" data-i18n="register.btn.submit">Зарегистрироваться</button>
+                    <a href="/login" class="oxnack-auth-link" data-i18n="register.link.login">Уже есть аккаунт? Войдите</a>
+                </div>
+            </form>
+            
+            <!-- Verification Form (hidden by default) -->
+            <form id="verificationForm" class="oxnack-hidden">
+                <div class="oxnack-form-group">
+                    <label for="verificationCode" data-i18n="register.verify.label.code">Код подтверждения</label>
+                    <input type="text" id="verificationCode" name="code" required placeholder="6-значный код из email" data-i18n="register.verify.placeholder.code">
+                    <p class="oxnack-form-hint" data-i18n="register.verify.hint.sent">Мы отправили код подтверждения на ваш email</p>
+                </div>
+                
+                <div class="oxnack-form-actions">
+                    <button type="submit" class="oxnack-primary-btn" data-i18n="register.verify.btn.confirm">Подтвердить</button>
+                    <a href="#" id="resendCode" class="oxnack-auth-link" data-i18n="register.verify.link.resend">Отправить код повторно</a>
+                </div>
+            </form>
+            
+            <div class="oxnack-auth-footer">
+                <p data-i18n="register.footer.agree">Регистрируясь, вы соглашаетесь с нашими <a href="/terms" data-i18n="footer.terms">Условиями использования</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

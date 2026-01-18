@@ -1,0 +1,316 @@
+.market-container {
+    min-height: calc(100vh - 140px);
+    padding: 40px 0 60px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.market-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.market-title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.market-subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.service-info {
+    padding: 25px;
+}
+
+.service-name {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    min-height: 60px;
+}
+
+.service-price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.service-price {
+    font-size: 1.6rem;
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.service-currency {
+    font-size: 1.1rem;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px;
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+.market-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.market-bot-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 136, 204, 0.3);
+}
+
+.market-bot-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+}
+
+.service-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    animation: modalAppear 0.3s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.modal-image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+#modalImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-details {
+    padding: 35px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#modalName {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.modal-price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.modal-price {
+    font-size: 2.2rem;
+    color: #27ae60;
+    font-weight: 800;
+}
+
+.modal-currency {
+    font-size: 1.4rem;
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #5d6d7e;
+    margin-bottom: 35px;
+    white-space: pre-line;
+}
+
+.modal-bot-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.modal-bot-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .market-container {
+        padding: 30px 15px;
+    }
+    
+    .market-title {
+        font-size: 2.2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        margin-bottom: 0;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+        flex-direction: column;
+        max-height: 85vh;
+    }
+    
+    .modal-image-container {
+        height: 200px;
+    }
+    
+    .modal-details {
+        padding: 25px;
+    }
+    
+    #modalName {
+        font-size: 1.5rem;
+    }
+    
+    .modal-price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .modal-content {
+        flex-direction: row;
+    }
+    
+    .modal-image-container {
+        width: 50%;
+        height: auto;
+    }
+    
+    .modal-details {
+        width: 50%;
+    }
+}

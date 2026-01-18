@@ -1,0 +1,40 @@
+/* Host Styles - oxnack-host */
+.oxnack-host-soon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.oxnack-host-soon-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    animation: oxnack-host-pulse 2s infinite;
+}
+
+.oxnack-host-soon-subtitle {
+    font-size: 2rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.oxnack-host-vps-badge {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes oxnack-host-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./site_files/logo.svg" type="image/x-icon">
+    <title>Top Up Balance - Oxnack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="oxnack-pay">
+        <div class="container">
+            <div class="oxnack-pay-header">
+                <h1>Top Up Balance</h1>
+                <p>Choose payment method</p>
+            </div>
+
+            <div class="oxnack-pay-content">
+                <div class="oxnack-current-balance">
+                    <h3 data-i18n="pay.current_balance">Current Balance</h3>
+                    <div class="oxnack-balance-amount" id="currentBalance" data-i18n="pay.loading">Loading...</div>
+                </div>
+
+                <div class="oxnack-payment-methods">
+                    <h3 data-i18n="pay.select_method">Select Payment Method</h3>
+                    
+                    <div class="oxnack-payment-options">
+                        <div class="oxnack-payment-option">
+                            <input type="radio" id="bankCard" name="paymentMethod" value="card" checked>
+                            <label for="bankCard">
+                                <i class="fas fa-credit-card"></i>
+                                <span data-i18n="pay.method.card">Bank Card</span>
+                            </label>
+                        </div>
+                        
+                        <div class="oxnack-payment-option">
+                            <input type="radio" id="crypto" name="paymentMethod" value="crypto">
+                            <label for="crypto">
+                                <i class="fab fa-bitcoin"></i>
+                                <span data-i18n="pay.method.crypto">Cryptocurrency</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="oxnack-amount-selection">
+                        <h4 data-i18n="pay.select_amount">Select Amount</h4>
+                        <div class="oxnack-amount-options">
+                            <button class="oxnack-amount-btn" data-amount="100" data-i18n="pay.amount.100">100 руб.</button>
+                            <button class="oxnack-amount-btn" data-amount="500" data-i18n="pay.amount.500">500 руб.</button>
+                            <button class="oxnack-amount-btn" data-amount="1000" data-i18n="pay.amount.1000">1000 руб.</button>
+                            <button class="oxnack-amount-btn" data-amount="2000" data-i18n="pay.amount.2000">2000 руб.</button>
+                        </div>
+                        
+                        <div class="oxnack-custom-amount">
+                            <label for="customAmount">Or enter custom amount:</label>
+                            <input type="number" id="customAmount" placeholder="Enter amount in RUB" min="10" max="100000">
+                        </div>
+                    </div>
+
+                    <div class="oxnack-pay-actions">
+                        <button id="payButton" class="oxnack-primary-btn oxnack-pay-btn">
+                            <i class="fas fa-lock"></i> Proceed to Payment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/pay.js"></script>
+</body>
+</html>

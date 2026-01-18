@@ -1,0 +1,218 @@
+/* VPN Guide Styles - oxnack-vpn */
+.oxnack-vpn-guide {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* VPN Hero Section - oxnack-vpn-hero */
+.oxnack-vpn-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.oxnack-vpn-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.oxnack-vpn-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.oxnack-tg-btn {
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.oxnack-tg-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* VPN Download Section - oxnack-vpn-download */
+.oxnack-vpn-download-section {
+    padding: 60px 0;
+}
+
+.oxnack-vpn-download-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.oxnack-vpn-platform-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.oxnack-vpn-platform-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.oxnack-vpn-platform-card:hover {
+    transform: translateY(-5px);
+}
+
+.oxnack-vpn-platform-img {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.oxnack-vpn-platform-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.oxnack-vpn-steps {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.oxnack-vpn-download-btn {
+    display: block;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.oxnack-vpn-download-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* VPN Connection Section - oxnack-vpn-connection */
+.oxnack-vpn-connection-section {
+    padding: 60px 0;
+    background: #f8fafc;
+}
+
+.oxnack-vpn-connection-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.oxnack-vpn-connection-steps {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.oxnack-vpn-step {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.oxnack-vpn-step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.oxnack-vpn-step-content {
+    flex-grow: 1;
+}
+
+.oxnack-vpn-command-box {
+    background: var(--dark-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin: 15px 0;
+    display: inline-block;
+}
+
+.oxnack-vpn-step-img {
+    margin-top: 20px;
+}
+
+.oxnack-vpn-step-img img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* VPN Features Section - oxnack-vpn-features */
+.oxnack-vpn-features-section {
+    padding: 60px 0;
+}
+
+.oxnack-vpn-features-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.oxnack-vpn-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.oxnack-vpn-feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.oxnack-vpn-feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* VPN Responsive - oxnack-vpn-responsive */
+@media (max-width: 768px) {
+    .oxnack-vpn-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .oxnack-vpn-step {
+        flex-direction: column;
+    }
+    
+    .oxnack-vpn-step-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .oxnack-vpn-platform-cards {
+        grid-template-columns: 1fr;
+    }
+}
